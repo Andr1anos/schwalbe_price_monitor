@@ -1,0 +1,12 @@
+services:
+  - type: cron
+    name: schwalbe_price_monitor
+    plan: free
+    env: python
+    cronJobs:
+      - name: morning_check
+        schedule: "0 9 * * *"
+        command: "python3 price_monitor.py --morning"
+      - name: afternoon_check
+        schedule: "0 13 * * *"
+        command: "python3 price_monitor.py --afternoon"
