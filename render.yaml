@@ -1,6 +1,0 @@
-services:
-  - type: worker
-    name: schwalbe-price-monitor
-    env: python
-    startCommand: python3 price_monitor.py
-    autoDeploy: true
